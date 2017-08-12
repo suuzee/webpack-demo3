@@ -2,9 +2,20 @@
   "name": "webpack-demo3",
   "version": "1.0.0",
   "description": "webpack-demo3",
-  "main": "index.js",
+  "main": "bundle.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "rimraf": "^2.6.1",
+    "webpack": "^3.5.3",
+    "webpack-dev-server": "^2.7.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf dist && set NODE_ENV=production&& webpack",
+    "dev": "set NODE_ENV=development&& node dev-server.js"
   },
   "repository": {
     "type": "git",
@@ -15,8 +26,5 @@
   "bugs": {
     "url": "https://github.com/xiaoyi3366/webpack-demo3/issues"
   },
-  "homepage": "https://github.com/xiaoyi3366/webpack-demo3#readme",
-  "devDependencies": {
-    "webpack": "^3.5.3"
-  }
+  "homepage": "https://github.com/xiaoyi3366/webpack-demo3#readme"
 }

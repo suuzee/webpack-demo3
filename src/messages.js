@@ -1,0 +1,1 @@
+module.exports={hi:"你好",event:"伊伟丽123"};
