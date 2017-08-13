@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/dist/";
+/******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
@@ -67,26 +67,16 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(1);
-
+﻿var app=document.getElementById('app'); 
+// app.innerHTML="hi";
+var messages=__webpack_require__(1); 
+app.innerHTML='<p>'+messages.hi+','+messages.event+"</p>";
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var app=document.getElementById('app'); 
-app.innerHTML="hi";
-var messages=__webpack_require__(2);
-app.innerHTML='<p>'+messages.hi+','+messages.event+'</p>';
-if(false){//启用热重载 
-	module.hot.accept();
-}
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports) {
 
-module.exports={hi:"你好",event:"伊伟丽123"};
+module.exports={ hi:'您好呀', event:'志玲姐姐123'};
 
 /***/ })
 /******/ ]);

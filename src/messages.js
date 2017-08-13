@@ -1,1 +1,1 @@
-module.exports={hi:"你好",event:"伊伟丽123"};
+module.exports={ hi:'您好呀', event:'志玲姐姐123'};

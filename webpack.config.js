@@ -1,22 +1,8 @@
-ï»¿var path=require('path');// å¯¼å…¥è·¯å¾„åŒ… 
-var webpack=require('webpack'); 
-var DEVELOPMENT=process.env.NODE_ENV==='development'; 
-var PRODUCTION=process.env.NODE_ENV==='production'; 
-var entry=PRODUCTION 
-? ['./src/index.js'] : [ 
-'./src/index.js', 
-'webpack/hot/dev-server',//å¼€å¯çƒ­é‡è½½ hot 
-'webpack-dev-server/client?http://localhost:8080'//æ·»åŠ webpack-dev-serverå®¢æˆ·ç«¯ 
-]; 
-var plugins=PRODUCTION ? [] : [ 
-new webpack.HotModuleReplacementPlugin()//å…¨å±€å¼€å¯ä»£ç çƒ­æ›¿æ¢ å¦‚æœæ˜¯CLIè¿™é‡Œåˆ™ä¸ç”¨å†™ 
-]; 
+var path = require('path'); // µ¼ÈëÂ·¾¶°ü 
 module.exports={ 
-entry:entry,//å…¥å£æ–‡ä»¶ 
-plugins:plugins, 
+entry:'./src/index.js',//Èë¿ÚÎÄ¼ş 
 output:{ 
-path:path.join(__dirname,'dist'),// æŒ‡å®šæ‰“åŒ…ä¹‹åçš„æ–‡ä»¶å¤¹ 
-publicPath:'/dist/',// æŒ‡å®šèµ„æºæ–‡ä»¶å¼•ç”¨çš„ç›®å½• 
-filename:'bundle.js'// æŒ‡å®šæ‰“åŒ…ä¸ºä¸€ä¸ªæ–‡ä»¶ bundle.js 
-} 
-} 
+path:path.join(__dirname,'dist'),// Ö¸¶¨´ò°üÖ®ºóµÄÎÄ¼ş¼Ğ 
+publicPath:'/dist/',// Ö¸¶¨×ÊÔ´ÎÄ¼şÒıÓÃµÄÄ¿Â¼ 
+filename:'bundle.js'// Ö¸¶¨´ò°üÎªÒ»¸öÎÄ¼ş bundle.js 
+}}
